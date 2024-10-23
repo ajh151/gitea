@@ -4,6 +4,7 @@ FROM docker.io/library/golang:1.23-alpine3.20 AS build-env
 ARG GOPROXY
 ENV GOPROXY=${GOPROXY:-direct}
 
+ENV PORT 8080
 ENV HOST 0.0.0.0
 
 ARG GITEA_VERSION
